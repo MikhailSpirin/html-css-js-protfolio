@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: #0077b6;
+  color: #caf0f8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+.cup {
+  position: relative;
+  border: 3px solid #03045e;
+  background: #caf0f8;
+  color: #03045e;
+  border-radius: 0px 0px 25px 25px;
+}
+
+.cup.big {
+  display: flex;
+  flex-direction: column;
+  width: 10em;
+  height: 22em;
+  background: #00b4d8;
+}
+
+.cup.big .empty {
+  background: #caf0f8;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  vertical-align: bottom;
+  font-size: 14px;
+  border-radius: 0px 0px 25px 25px;
+  transition: all 0.3s ease-in;
+}
+
+.cup.big .empty p{
+  margin: 0;
+}
+
+#empty-quantity {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.cup.big .filled {
+  height: 0%;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold; 
+  font-size: 28px;
+  transition: all 0.3s ease-in;
+}
+
+.cups-container {
+  width: 40vw;
+  max-width: 400px;
+  height: 32vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  
+}
+
+.cup.small {
+  margin: 8px 5px;
+  padding: 10px 5px 5px 5px;
+  font-weight: 600;
+  flex: 0 1 21%;
+  text-align: center;
+}
+
+.cup.small.active {
+  background: #00b4d8;
+  color: #caf0f8;
+}
